@@ -31,7 +31,7 @@ export default function Home() {
             <Link href="#protocol" className="text-sm hover:text-accent transition-colors">
               Protocol
             </Link>
-            <Link href="#docs" className="text-sm hover:text-accent transition-colors">
+            <Link href="/docs" className="text-sm hover:text-accent transition-colors">
               Docs
             </Link>
             <ConnectWalletButton />
@@ -48,16 +48,17 @@ export default function Home() {
             </div>
 
             <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tighter sm:text-6xl lg:text-7xl text-balance">
-              <GlitchText>Anonymous NFTs.</GlitchText>
+              <GlitchText>Zero-Knowledge</GlitchText>
               <br />
-              <span className="text-muted-foreground">Zero Knowledge.</span>
+              <span className="text-muted-foreground">NFT Privacy Protocol</span>
               <br />
-              <span className="text-foreground">Absolute Privacy.</span>
+              <span className="text-foreground">Cryptographic Anonymity</span>
             </h1>
 
             <p className="mb-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Sponge Protocol enables truly private NFT transactions through zero-knowledge proofs and cryptographic
-              anonymity. Mint, transfer, and verify ownership without revealing your identity.
+              Sponge Protocol leverages zkSNARK technology to enable truly private NFT transactions. Verify ownership, 
+              prove transfers, and maintain complete anonymity through stealth addresses and zero-knowledge proofs. 
+              No transaction metadata, no sender/recipient identification, no on-chain privacy leaks.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -69,13 +70,15 @@ export default function Home() {
                   {"> ENTER_PROTOCOL"}
                 </Button>
               </Link>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-foreground hover:border-accent hover:bg-accent/10 hover:text-accent bg-transparent"
-              >
-                {"> READ_DOCS"}
-              </Button>
+              <Link href="/docs">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-foreground hover:border-accent hover:bg-accent/10 hover:text-accent bg-transparent"
+                >
+                  {"> READ_DOCS"}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -88,25 +91,25 @@ export default function Home() {
       >
         <div className="container mx-auto px-4">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold tracking-tighter">{"[ CORE_PROTOCOL_FUNCTIONS ]"}</h2>
-            <p className="text-muted-foreground">Three pillars of cryptographic privacy</p>
+            <h2 className="mb-4 text-3xl font-bold tracking-tighter">{"[ PROTOCOL_TECHNOLOGY ]"}</h2>
+            <p className="text-muted-foreground">Powered by zkSNARK cryptography and stealth address technology</p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
             <ProtocolCard
               icon={Shield}
-              title="Mint Privately"
-              description="Create NFTs with encrypted metadata. Your ownership remains cryptographically shielded from public view."
+              title="Generate ZK-Proofs"
+              description="Create zero-knowledge proofs to verify NFT ownership and eligibility without revealing sensitive cryptographic parameters or transaction details."
             />
             <ProtocolCard
               icon={Send}
-              title="Transfer Anonymously"
-              description="Gift or sell NFTs without revealing sender or receiver addresses through zero-knowledge circuits."
+              title="Stealth Transfers"
+              description="Transfer assets through stealth addresses. Sender and recipient identities remain completely hidden on-chain. No address linking possible."
             />
             <ProtocolCard
               icon={CheckCircle2}
-              title="Verify Ownership"
-              description="Prove you own an NFT via zero-knowledge proofs without exposing your wallet or transaction history."
+              title="Privacy Verification"
+              description="Prove ownership and validate transfers using non-interactive zero-knowledge proofs. Verification without exposure of underlying data."
             />
           </div>
         </div>

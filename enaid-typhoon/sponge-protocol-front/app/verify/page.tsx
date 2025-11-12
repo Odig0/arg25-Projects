@@ -41,8 +41,8 @@ export default function VerifyPage() {
         <div className="mx-auto max-w-2xl">
           {/* Header */}
           <div className="mb-8">
-            <h1 className="mb-2 text-3xl font-bold tracking-tighter">{"[ VERIFY_OWNERSHIP ]"}</h1>
-            <p className="text-sm text-muted-foreground">Generate and verify zero-knowledge proofs</p>
+            <h1 className="mb-2 text-3xl font-bold tracking-tighter">{"[ VERIFY_PROOF ]"}</h1>
+            <p className="text-sm text-muted-foreground">Generate and validate zero-knowledge proofs without revealing underlying ownership data</p>
           </div>
 
           <div className="space-y-6">

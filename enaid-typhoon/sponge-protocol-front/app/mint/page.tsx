@@ -38,26 +38,26 @@ export default function MintPage() {
           <div className="mx-auto max-w-2xl">
             {/* Header */}
             <div className="mb-8">
-              <h1 className="mb-2 text-3xl font-bold tracking-tighter">{"[ MINT_PRIVATE_NFT ]"}</h1>
-              <p className="text-sm text-muted-foreground">Create an NFT with cryptographic privacy</p>
+              <h1 className="mb-2 text-3xl font-bold tracking-tighter">{"[ GENERATE_PROOF ]"}</h1>
+              <p className="text-sm text-muted-foreground">Create a zero-knowledge proof for your private asset. Ownership verification without identity disclosure.</p>
             </div>
 
             {/* Mint Form */}
             <form onSubmit={handleSubmit} className="space-y-6 border border-border bg-card/90 backdrop-blur-sm p-8">
               {/* Image Upload */}
               <div className="space-y-2">
-                <Label className="text-xs font-bold uppercase tracking-wider">NFT Image</Label>
+                <Label className="text-xs font-bold uppercase tracking-wider">Asset Data</Label>
                 <div className="border-2 border-dashed border-border hover:border-accent transition-colors p-12 text-center cursor-pointer group">
                   <Upload className="mx-auto mb-4 h-12 w-12 text-muted-foreground group-hover:text-accent transition-colors" />
-                  <p className="text-sm text-muted-foreground">Click to upload or drag and drop</p>
-                  <p className="text-xs text-muted-foreground">PNG, JPG, GIF up to 10MB</p>
+                  <p className="text-sm text-muted-foreground">Upload asset information for proof generation</p>
+                  <p className="text-xs text-muted-foreground">Data will be encrypted and used for ZK-proof computation</p>
                 </div>
               </div>
 
               {/* Name */}
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-xs font-bold uppercase tracking-wider">
-                  NFT Name
+                  Asset Identifier
                 </Label>
                 <Input
                   id="name"
@@ -86,8 +86,8 @@ export default function MintPage() {
                 <div className="flex items-center gap-3">
                   <Lock className="h-5 w-5 text-accent" />
                   <div>
-                    <p className="text-sm font-bold">Encrypt Metadata</p>
-                    <p className="text-xs text-muted-foreground">Hide NFT details from public view</p>
+                    <p className="text-sm font-bold">Encrypt Data</p>
+                    <p className="text-xs text-muted-foreground">Proof data hidden from on-chain visibility</p>
                   </div>
                 </div>
                 <button
@@ -111,7 +111,7 @@ export default function MintPage() {
                 className="w-full border border-accent bg-transparent text-accent hover:bg-accent hover:text-background font-bold py-6 text-lg"
                 disabled={isLoading}
               >
-                {"> MINT_WITH_PRIVACY"}
+                {"> GENERATE_ZK_PROOF"}
               </Button>
             </form>
           </div>
@@ -122,7 +122,7 @@ export default function MintPage() {
       <ConfirmationModal
         isOpen={showModal}
         onClose={() => setShowModal(false)}
-        title="NFT_MINTED"
+        title="PROOF_GENERATED"
         message="Your private NFT has been successfully minted with encrypted metadata."
         txHash={mockTxHash}
       />
