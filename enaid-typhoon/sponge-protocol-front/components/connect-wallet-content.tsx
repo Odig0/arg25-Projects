@@ -2,28 +2,29 @@
 
 import Image from 'next/image'
 import { useEffect } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 import { useAccount, useConnect, useDisconnect } from 'wagmi'
 import { Button } from '@/components/ui/button'
 import { Wallet } from 'lucide-react'
 
 export function ConnectWalletContent() {
   const router = useRouter()
+  const pathname = usePathname()
   const { address, isConnected } = useAccount()
   const { connect, connectors } = useConnect()
   const { disconnect } = useDisconnect()
 
   const metaMaskConnector = connectors.find((c) => c.name === 'MetaMask')
 
-  // Redirige al dashboard cuando se conecte
+  // Redirige al dashboard cuando se conecte, pero SOLO en la página de home
   useEffect(() => {
-    if (isConnected && address) {
+    if (isConnected && address && pathname === '/') {
       const timer = setTimeout(() => {
         router.push('/dashboard')
       }, 300)
       return () => clearTimeout(timer)
     }
-  }, [isConnected, address, router])
+  }, [isConnected, address, pathname, router])
 
   if (isConnected && address) {
     return (
