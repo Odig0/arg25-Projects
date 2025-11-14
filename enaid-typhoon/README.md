@@ -1,10 +1,7 @@
-# Typhoon Protocol – Privacy-Preserving NFT Transfers
+# Typhoon Protocol - Privacy-Preserving NFT Transfers
 
-> 🔗 **Repositorio original del backend (creado por David Zapata):**  
-> https://github.com/DavidZapataOh/sponge-protocol-back
-
-Este README corresponde a nuestro proyecto **Typhoon Protocol**, desarrollado para **Invisible Garden – ARG25**.  
-Aquí documentamos el avance semanal, arquitectura, dependencias críticas y progreso general del equipo.
+This README documents the **Typhoon Protocol** project developed for **Invisible Garden - ARG25**.  
+Here we track weekly progress, architecture, critical dependencies, and overall team advancement.
 
 ---
 
@@ -15,14 +12,14 @@ Aquí documentamos el avance semanal, arquitectura, dependencias críticas y pro
 
 ## Team
 
-**Integrantes:**
+**Members:**
 - Diego Guzman Montoya  
 - David Zapata  
 - Pedro Solís Gonzales
 
 **GitHub:**
 - [@Odig](https://github.com/Odig0)  
-- [@DavidZapataOh](https://github.com/DavidZapataOh) *(creador del repo backend original)*  
+- [@DavidZapataOh](https://github.com/DavidZapataOh)  
 - [@jwnior15](https://github.com/jwnior15)
 
 **Devfolio Handles:**  
@@ -34,31 +31,38 @@ Aquí documentamos el avance semanal, arquitectura, dependencias críticas y pro
 
 ## Project Description
 
-Typhoon Protocol es un **protocolo para transferir NFTs con privacidad total**, construido con **Zero-Knowledge Proofs (ZKPs)** usando:
+Typhoon Protocol is a **protocol for transferring NFTs with complete privacy**, built with **Zero-Knowledge Proofs (ZKPs)** using:
 
-- **Noir 1.0.0-beta.9** para circuitos ZK  
-- **Barretenberg 0.87.0** como backend criptográfico  
-- **Solidity** para la lógica en la EVM  
-- **Next.js** para la aplicación descentralizada
+- **Noir 1.0.0-beta.9** for ZK circuits  
+- **Barretenberg 0.87.0** as cryptographic backend  
+- **Solidity** for EVM logic  
+- **Next.js** for the decentralized application
 
-### 🔐 Problema que resolvemos
-Los sistemas NFT actuales exponen públicamente:
-- Propietarios  
-- Historial de transacciones  
-- Dirección de wallet  
-- Metadata asociada  
+### Problem We Solve
+Current NFT systems publicly expose:
+- Owners  
+- Transaction history  
+- Wallet addresses  
+- Associated metadata  
 
-Esto compromete la privacidad y la seguridad de los usuarios.
+This compromises user privacy and security.
 
-### 🌀 Nuestra solución
-Un protocolo donde los usuarios pueden:
-- **Transferir NFTs**
-- **Recibir NFTs**
-- **Regalar NFTs**
+### Our Solution
+A protocol where users can:
+- **Transfer NFTs**
+- **Receive NFTs**
+- **Gift NFTs**
 
-Todo **sin revelar su dirección pública**, usando únicamente **pruebas ZK** verificadas on-chain.
+All **without revealing their public address**, using only **ZK proofs** verified on-chain.
 
-El contrato solo ve una prueba válida, nunca una dirección o historial.
+The smart contract only sees a valid proof, never an address or history.
+
+---
+
+## Repositories
+
+- **Backend:** https://github.com/DavidZapataOh/sponge-protocol-back  
+- **Frontend:** https://github.com/DavidZapataOh/sponge-protocol-front  
 
 ---
 
@@ -73,95 +77,51 @@ El contrato solo ve una prueba válida, nunca una dirección o historial.
 
 ---
 
-## ⚠️ Versiones obligatorias
+## Required Versions
 
-Este proyecto SÍ requiere versiones exactas.  
-Otras versiones producirán fallos en artefactos, pruebas o verificación.
+This project requires exact versions.  
+Other versions will produce failures in artifacts, tests, or verification.
 
-### 🧮 Noir – **1.0.0-beta.9**
-Se usa porque:
-- Cambió el formato de artefactos  
-- Compatibilidad estable con Barretenberg 0.87.0  
-- Mejor soporte para inputs complejos  
-- Nuevo módulo de compilación
+### Noir - **1.0.0-beta.9**
+Used because:
+- Changed artifact format  
+- Stable compatibility with Barretenberg 0.87.0  
+- Better support for complex inputs  
+- New compilation module
 
-### 🔐 Barretenberg – **0.87.0**
-Fundamental por:
-- Implementación estable de UltraPlonk  
-- API consistente para verificación WASM  
-- Compatibilidad total con Noir beta 9  
-- Buen soporte en entornos Next.js
+### Barretenberg - **0.87.0**
+Fundamental because:
+- Stable UltraPlonk implementation  
+- Consistent API for WASM verification  
+- Full compatibility with Noir beta 9  
+- Good support in Next.js environments
 
-Si usas otra versión:
-- Las pruebas no verifican  
-- Los artefactos no son compatibles  
-- Puede fallar el verificador on-chain  
+If you use another version:
+- Proofs won't verify  
+- Artifacts are incompatible  
+- On-chain verifier may fail  
 
 ---
 
 ## Objectives
 
-Al finalizar ARG25 buscamos:
-- Dominio práctico y teórico de ZKPs  
-- Construir un protocolo NFT privado, verificable y descentralizado  
-- Integrar Noir + Barretenberg + Solidity con buenas prácticas  
-- Entregar un MVP funcional y demostrable
+By the end of ARG25 we aim for:
+- Practical and theoretical mastery of ZKPs  
+- Build a private, verifiable, and decentralized NFT protocol  
+- Integrate Noir + Barretenberg + Solidity with best practices  
+- Deliver a functional and demonstrable MVP
 
 ---
 
-## Weekly Progress
 
-### 📌 Week 1 (Ends Oct 31)
-**Goals**
-- Definir la idea ZK
-- Elegir stack compatible Noir + Barretenberg
-- Diseñar arquitectura inicial
-
-**Progress Summary**
-- Objetivos completados: diseño conceptual, prototipo base y selección tecnológica.
-
----
-
-### 📌 Week 2 (Ends Nov 7)
-**Goals**
-- *(Por completar)*
-
-**Progress Summary**
-- *(Por completar)*
-
----
-
-### 📌 Week 3 (Ends Nov 14)
-**Goals**
-- *(Por completar)*
-
-**Progress Summary**
-- *(Por completar)*
-
----
-
-## Final Wrap-Up
-
-Después de la semana 3:
-
-- **Main Repository:**  
-- **Demo / Deployment:**  
-- **Slides / Presentation:**  
-
----
-
-## Learnings
-*(Por completar al final del programa)*
-
----
 
 ## Next Steps
-*(Roadmap posterior a ARG25)*
+Roadmap after ARG25
 
-- Extender pruebas  
-- Integrar mobile  
-- Desplegar versión multi-chain  
-- Optimizar pruebas y verificación  
+- Extend tests  
+- Integrate mobile  
+- Deploy multi-chain version  
+- Optimize proofs and verification  
 
 ---
 
